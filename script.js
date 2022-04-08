@@ -135,3 +135,17 @@ const account = {
 console.log(account.latest);
 account.latest = 50;
 console.log(accoun.movements);
+
+//static methods 
+//Object.create
+
+const PersonProto = {
+  calcAge(){
+    console.log(2037 - this.birthYear)
+  },
+}
+
+const steven = Object.create(PersonProto);
+console.log(steven);
+steven.birthYear = 2002; 
+steven.calcAge();
